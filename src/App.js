@@ -1,12 +1,9 @@
 import React, { useRef } from "react";
 import "./App.scss";
-import { render } from "react-dom";
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
 import { InView } from "react-intersection-observer";
 import { AnimatePresence, motion } from "framer-motion";
-import { Video, CloudinaryContext } from "cloudinary-react";
 import Header from "./components/Header";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import {
@@ -60,10 +57,7 @@ function Home() {
   const imageDemo = "../thema-landing.jpg";
   const image2 = "../photography.jpg";
   const image3 = "../2385.jpg";
-  let motion1 = useRef(null);
-  let motion2 = useRef(null);
-
-
+ 
   return (
     <InView threshold={0.045}>
       {({ ref, inView }) => (
@@ -140,19 +134,15 @@ function Home() {
               style={{ position: "relative" }}
               onMouseEnter={e => handleHover(e)}
               onMouseOut={e => handleHoverExit(e)}
-              ref={el => (motion1 = el)}
             >Motion</motion.h1>
             <div>
               <motion.h1
                 initial={{ opacity: 0, scale: 1.1 }}
                 animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.1 }}
                 transition={{ duration: 0.8, delay: .6 }}
-                style={{
-                  position: "relative"
-                }}
+                style={{ position: "relative" }}
                 onMouseEnter={e => handleHover(e)}
                 onMouseOut={e => handleHoverExit(e)}
-                ref={el => (motion2 = el)}
               >DESIGN</motion.h1>
             </div>
           </div>
