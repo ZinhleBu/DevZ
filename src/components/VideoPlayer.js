@@ -1,3 +1,4 @@
+import React from "react";
 
 import { Video, CloudinaryContext } from "cloudinary-react";
 const VideoPlayer = () => {
