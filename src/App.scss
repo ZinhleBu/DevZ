@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap");
+//Color variables
+$red: #e20001;
+$black: #191919;
+//Breakpoints
+$xm: "320px";
+$sm: "480px";
+$md: "669px";
+$lg: "1025px";
+$bg: "1208px";
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    overflow: none;
+    @media(min-width: $xm) {
+        width: 1280px;
+    }
+    @media(min-width: $sm) {
+        width: 480px;
+    }
+    @media(min-width: $md) {
+        width: 769px;
+    }
+    @media(min-width: $lg) {
+        width: 1025px;
+    }
+    @media(min-width: $bg) {
+        width: 1280px;
+    }
+    .wrapper {
+        padding: 0 48px;
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            p {
+                font-size: 0.75rem;
+                letter-spacing: 0.3rem;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+            h5 {
+                margin-top: 260px;
+                font-size: 24px;
+                font-weight: 600;
+                width: 300px;
+                @media(max-width: $xm) {
+                    width: 150px;
+                }
+                @media(min-width: $sm) {
+                    width: 290px;
+                }
+                @media(min-width: $md) {
+                    width: 769px;
+                }
+            }
+        }
+    }
+}
+
+header {
+    height: 100px;
+    .inner-header {
+        position: relative;
+        z-index: 10;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo a {
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            color: $black;
+        }
+        .menu {
+            button {
+                border: none;
+                background: none;
+                outline: none;
+                cursor: pointer;
+                font-size: 0.8rem;
+                mix-blend-mode: difference;
+            }
+        }
+    }
+    .hamburger-menu {
+        display: none;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        .menu-secondary-background-color {
+            background: $black;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+        .menu-layer {
+            position: relative;
+            background: $red;
+            height: 100%;
+            overflow: hidden;
+            .menu-city-background {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                background-size: cover;
+                background-repeat: no-repeat;
+                animation-name: backgroundEffect;
+                animation-duration: 30s;
+                animation-iteration-count: infinite;
+            }
+            .wrapper {
+                position: relative;
+                .menu-links {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    top: 200px;
+                    width: 100%;
+                    @media(max-width: $lg) {
+                        display: flex;
+                        align-items: left;
+                        width: 80%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    nav {
+                        display: block;
+                        position: relative;
+                        ul {
+                            margin: 0;
+                            padding: 0;
+                            li {
+                                list-style: none;
+                                font-size: 6rem;
+                                font-weight: 700;
+                                cursor: pointer;
+                                height: 135px;
+                                overflow: hidden;
+                                position: relative;
+                                width: 700px;
+                                @media(max-width: $md) {
+                                    width: 500px;
+                                    font-size: 4rem;
+                                }
+                                @media(max-width: $sm) {
+                                    width: 300px;
+                                    font-size: 2rem;
+                                }
+                                a {
+                                    position: absolute;
+                                    color: #fff;
+                                    text-decoration: none;
+                                    &:hover {
+                                        color: $black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .info {
+                        color: #fff;
+                        width: 300px;
+                        h3 {
+                            font-size: 1.2rem;
+                            margin: 8px auto;
+                        }
+                        p {
+                            margin: 0 auto;
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+                .locations {
+                    position: absolute;
+                    bottom: -80px;
+                    color: #fff;
+                    margin-top: 16px;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    span {
+                        cursor: pointer;
+                        &:first-child {
+                            margin-left: 64px;
+                        }
+                        font-weight: 400;
+                        margin: 0 32px;
+                        transition: 0.3s ease-in-out;
+                        &:hover {
+                            color: #fff;
+                            background: $black;
+                            padding: 8px 24px;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes backgroundEffect {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 40% 10%;
+    }
+    50% {
+        background-position: 0 10%;
+    }
+    75% {
+        background-position: 10% 40%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.container-main {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 18px;
+    position: relative;
+    background-color: #d7d7d7;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    justify-content: space-between;
+    @media(max-width: $xm) {
+        width: 280px;
+    }
+    @media(max-width: $sm) {
+        width: 250px;
+        margin: 0;
+        align-items: center;
+    }
+    @media(max-width: $md) {
+        width: 309px;
+    }
+    .container-title {
+        left: 70%;
+        @media(max-width: $sm) {
+            width: "300";
+            left: "20%";
+        }
+    }
+}
+
+.cta {
+    width: fit-content;
+    height: 500px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding: 2rem 2rem 2rem 2rem;
+    border-radius: 18px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @media(max-w4dth: $md) {
+        width: 600px;
+        height: 700px;
+    }
+    @media(max-width: $lg) {
+        flex-direction: column;
+        width: fit-content;
+    }
+    .cta-inner {
+        position: relative;
+        width: 300px;
+        top: 20%;
+        height: fit-content;
+        padding: 2rem 2rem 3rem 2rem;
+    }
+    .cta-img {
+        position: relative;
+        border-radius: 18px;
+        @media(max-width: $lg) {
+            flex-direction: column;
+            width: 450px;
+            top: 20%;
+        }
+        @media(max-width: $md) {
+            flex-direction: column;
+            width: 350px;
+            top: 20%;
+        }
+        .img-inner {
+            @media(max-width: $lg) {
+                flex-direction: column;
+                width: 300px;
+            }
+            @media(max-width: $md) {
+                flex-direction: column;
+                width: 250px;
+            }
+        }
+    }
+}
+
+.typo {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    @media(max-width: $xm) {
+        width: 200px;
+    }
+    @media(max-width: $sm) {
+        width: 300px;
+    }
+    @media(min-width: $md) {
+        width: 400px;
+    }
+    @media(min-width: $lg) {
+        width: 100%;
+    }
+    h1 {
+        width: 400px;
+        @media(min-width: $xm) {
+            width: 290px;
+            font-size: 60px;
+        }
+        @media(min-width: $sm) {
+            width: 350px;
+            font-size: 70px;
+        }
+        @media(min-width: $md) {
+            font-size: 90px;
+        }
+        @media(min-width: $lg) {
+            font-size: 150px;
+        }
+    }
+    .red-background {
+        width: 300px;
+        height: 30px;
+        position: relative;
+        background-color: $red;
+        top: 40%;
+        @media(min-width: $xm) {
+            width: 50px;
+            height: 10px;
+        }
+        @media(min-width: $sm) {
+            width: 150px;
+            height: 20px;
+        }
+        @media(min-width: $md) {
+            width: 250px;
+            height: 30px;
+        }
+        @media(min-width: $lg) {
+            width: 300px;
+            height: 30px;
+        }
+    }
+}
+
+.mock {
+    width: 100%;
+    position: relative;
+    @media(max-width: $xm) {
+        top: 40%;
+        width: 200px;
+    }
+    @media(max-width: $sm) {
+        top: 50%;
+        width: 300px;
+    }
+    @media(min-width: $md) {
+        width: 400px;
+    }
+    @media(min-width: $lg) {
+        width: 100%;
+    }
+}
+
+.video-sec {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
