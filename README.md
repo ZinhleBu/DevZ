@@ -1,4 +1,4 @@
-## A really fancy menu built with react
+## A really fancy portfolio website built using react, framer motion, gsap and react-parallax.
 Feel free to use it in your projects or just learn
 
 Built with React.js, React Router and GSAP
@@ -8,6 +8,8 @@ Built with React.js, React Router and GSAP
 
 `npm run start`
 
+
+Inspred by tutorial by Wrong Akram, you can find his tutorials:
 
 Design: https://dribbble.com/shots/8613233-Hamburger-Menu-Code-Provided
 
