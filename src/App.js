@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./App.scss";
 import { Parallax } from "react-parallax";
 import { InView } from "react-intersection-observer";
