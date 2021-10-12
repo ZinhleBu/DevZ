@@ -60,7 +60,9 @@ function Home() {
   const imageDemo = "../thema-landing.jpg";
   const image2 = "../photography.jpg";
   const image3 = "../2385.jpg";
- 
+  let motion1 = useRef(null);
+  let motion2 = useRef(null);
+
 
   return (
     <InView threshold={0.045}>
