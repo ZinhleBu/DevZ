@@ -1,8 +1,6 @@
-import React, { useRef } from "react";
 
-import { Video, CloudinaryContext, Transformation } from "cloudinary-react";
+import { Video, CloudinaryContext } from "cloudinary-react";
 const VideoPlayer = () => {
-    const videoRef = useRef();
     return (
         <CloudinaryContext cloud_name="icultivate">
             <div>
