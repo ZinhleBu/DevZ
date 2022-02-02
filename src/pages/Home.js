@@ -22,21 +22,16 @@ function Home() {
     return (
         <InView threshold={0.045}>
             {({ ref, inView }) => (
-                <div className="container">
-                    <div className="wrapper">
+                <div>
                         <motion.h5>
                             HI, I'm <b>Zinhle</b>, I'm a creative, frontend developer, and I make
-                            clean, modern ,digital and design work
-                            to new heights.
-
-
+                            clean, modern custom websites. My skills also include Motion graphics and animation. 
                         </motion.h5>
                         <h1>Projects</h1>
                         <div className="container-main">
                         <Link
                             to='/work'
                             >
-                                
                                 <Parallax bgImage={imageDemo} strength={200}>
                                 <div style={{ height: 600, width: 1200 }}>
                                     <div className="container-title"
@@ -53,10 +48,7 @@ function Home() {
                                 </div>
                             </Parallax>
                         </Link>
-                            
-
                         </div>
-
                         <div className="links">
                         <Link
                             to='/work'
@@ -72,7 +64,9 @@ function Home() {
                         <div className="cta">
                             <div className="cta-inner">
                                 <h1>About</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias eos beatae quos, aut quo similique molestiae facere expedita excepturi nulla!
+                                <p>
+                                    Im from Johannesburg South Africa and I've been designing for the web for the past 3 years.<br></br>
+                                    If youre trying to get your product or service on the web, feel free to give me a call or email me. 
                                 </p>
                             </div>
                             <Parallax className="cta-img" bgImage={image2} strength={100}>
@@ -81,7 +75,40 @@ function Home() {
                                 </div>
                             </Parallax>
                         </div>
-                        <div className="mock">
+                       
+
+                        <div className="typo">
+                        
+                        <motion.h1
+                            initial={{ opacity: 0, scale: 1.1 }}
+                            animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.1 }}
+                            transition={{ duration: 0.8, delay: .4 }}
+                            style={{ position: "relative" }}
+                            onMouseEnter={e => handleHover(e)}
+                            onMouseOut={e => handleHoverExit(e)}
+                        >Web</motion.h1>
+                        <div>
+                        <motion.div
+                            ref={ref}
+                            initial={{ opacity: 0, width: 0 }}
+                            animate={inView ? { opacity: 1, width: "60%" } : { opacity: 0, width: 0 }}
+                            transition={{ duration: 0.8, delay: .4 }}
+                            style={{ position: "relative" }}
+                            className="red-background">
+
+                        </motion.div>
+                            <motion.h1
+                                initial={{ opacity: 0, scale: 1.1 }}
+                                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.1 }}
+                                transition={{ duration: 0.8, delay: .6 }}
+                                style={{ position: "relative" }}
+                                onMouseEnter={e => handleHover(e)}
+                                onMouseOut={e => handleHoverExit(e)}
+                            >Design</motion.h1>
+                        </div>
+                    </div>
+
+                    <div className="mock">
                             <Parallax bgImage={image3} strength={200}
                                 style={{
                                     position: " relative",
@@ -93,45 +120,16 @@ function Home() {
                                     <div > </div>
                                 </div>
                             </Parallax>
+                            
                         </div>
-
-                    </div>
-
-                    <div className="typo">
-                        <motion.div
-                            ref={ref}
-                            initial={{ opacity: 0, width: 0 }}
-                            animate={inView ? { opacity: 1, width: "60%" } : { opacity: 0, width: 0 }}
-                            transition={{ duration: 0.8, delay: .4 }}
-                            style={{ position: "relative" }}
-                            className="red-background">
-
-                        </motion.div>
-                        <motion.h1
-                            initial={{ opacity: 0, scale: 1.1 }}
-                            animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.1 }}
-                            transition={{ duration: 0.8, delay: .4 }}
-                            style={{ position: "relative" }}
-                            onMouseEnter={e => handleHover(e)}
-                            onMouseOut={e => handleHoverExit(e)}
-                        >Motion</motion.h1>
-                        <div>
-                            <motion.h1
-                                initial={{ opacity: 0, scale: 1.1 }}
-                                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.1 }}
-                                transition={{ duration: 0.8, delay: .6 }}
-                                style={{ position: "relative" }}
-                                onMouseEnter={e => handleHover(e)}
-                                onMouseOut={e => handleHoverExit(e)}
-                            >Graphics</motion.h1>
-                        </div>
-                    </div>
+                  
                     <div className="video-sec">
                         <VideoPlayer />
                         <h1>Video Production</h1>
                         <h2>3D and 2D animation</h2>
                         <p>Some of my animation work ive done in the past year.</p>
                     </div>
+                    
 
                 </div>
             )}

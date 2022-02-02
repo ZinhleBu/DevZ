@@ -330,7 +330,7 @@ header {
 
 .typo {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
     @media(max-width: $xm) {
         width: 200px;
@@ -348,25 +348,24 @@ header {
         width: 400px;
         @media(min-width: $xm) {
             width: 290px;
-            font-size: 60px;
+            font-size: 40px;
         }
         @media(min-width: $sm) {
             width: 350px;
-            font-size: 70px;
+            font-size: 50px;
         }
         @media(min-width: $md) {
-            font-size: 90px;
+            font-size: 60px;
         }
         @media(min-width: $lg) {
-            font-size: 150px;
+            font-size: 100px;
         }
     }
     .red-background {
-        width: 300px;
+        width: 250px;
         height: 30px;
         position: relative;
         background-color: $red;
-        top: 40%;
         @media(min-width: $xm) {
             width: 50px;
             height: 10px;
@@ -380,7 +379,7 @@ header {
             height: 30px;
         }
         @media(min-width: $lg) {
-            width: 300px;
+            width: 250px;
             height: 30px;
         }
     }
@@ -389,6 +388,7 @@ header {
 .mock {
     width: 100%;
     position: relative;
+    margin-bottom: 100px;
     @media(max-width: $xm) {
         top: 40%;
         width: 200px;
@@ -411,26 +411,28 @@ header {
     position: relative;
     border-radius: 18px;
     overflow: hidden;
-    .videoGrid {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        .vid1 {
-            width: 50%;
-        }
-    }
-    .last-row {
-        display: flex;
+}
+
+.videoGrid {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    .vid1 {
         width: 50%;
-        height: 100%;
-        position: relative;
-        flex-direction: column;
-        .vid2 {
-            width: 100%;
-        }
-        .vid3 {
-            width: 100%;
-        }
+    }
+}
+
+.last-row {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+    .vid2 {
+        width: 100%;
+    }
+    .vid3 {
+        width: 100%;
     }
 }
 
