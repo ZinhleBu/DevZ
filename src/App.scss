@@ -246,8 +246,7 @@ header {
 }
 
 .container-main {
-    width: 80vw;
-    margin: 0 auto;
+    width: 100%;
     border-radius: 18px;
     position: relative;
     background-color: #d7d7d7;
@@ -420,6 +419,19 @@ header {
     }
 }
 
+.banner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+        font-size: 3rem;
+    }
+}
+
 .brands {
     width: 100%;
     min-height: 80vh;
@@ -450,4 +462,19 @@ header {
     padding-right: 10px;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+footer {
+    min-height: 200px;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .footerSec {
+        width: 33, 3%;
+        height: 100%;
+        display: flex;
+        padding-right: 100px;
+        justify-content: space-between;
+    }
 }

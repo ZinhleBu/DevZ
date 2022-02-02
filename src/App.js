@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               </div>
             </div>
           </div>
+          <Footer />
         </div>
       </Router>
     </AnimatePresence>

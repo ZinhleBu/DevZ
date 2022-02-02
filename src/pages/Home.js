@@ -9,22 +9,15 @@ import {
     handleHoverExit
 
 } from "../components/Animations";
-import VideoPlayer from "../components/VideoPlayer";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import { Image } from "cloudinary-react";
 
 
 function Home() {
 
     const imageDemo = "../thema-landing.jpg";
-    const image2 = "../photography.jpg";
+    const image2 = "../dark.jpg";
     const image3 = "../jag.jpg";
-    const logo1 = "../logos/devz.png";
-    const logo2 = "../logos/fundilogo.png";
-    const logo3 = "../logos/gryphon.png";
-    const logo4 = "../logos/lanseria.png";
-    const logo5 = "../logos/nestle.png";
-    const logo6 = "../logos/Iwesizwe.png";
+
 
 
     return (
@@ -38,14 +31,12 @@ function Home() {
                         </motion.h5>
                         <h1>Projects</h1>
                     </div>
-
-
                     <div className="container-main">
                         <Link
                             to='/work'
                         >
                             <Parallax bgImage={imageDemo} strength={200}>
-                                <div style={{ height: 600, width: 1200 }}>
+                                <div style={{ height: 600, width: 1300 }}>
                                     <div className="container-title"
                                         style={{
                                             fontSize: "34px",
@@ -118,7 +109,6 @@ function Home() {
                             >Design</motion.h1>
                         </div>
                     </div>
-
                     <div className="mock">
                         <Parallax bgImage={image3} strength={200}
                             style={{
@@ -131,29 +121,12 @@ function Home() {
                                 <div > </div>
                             </div>
                         </Parallax>
-
                     </div>
-
-                    <div className="video-sec">
-                        <h1>Video Production</h1>
-                        <h2>3D and 2D animation</h2>
-                        <p>Some of my animation work ive done in the past year.</p>
-                        <VideoPlayer />
-                        <div className="links">
-                            <Link
-                                to='/work'
-                                style={{
-                                    color: "#000000",
-                                }}>
-
-                                <p>
-                                    See more
-                                </p>
-                            </Link>
-                        </div>
+                    <div className="banner">
+                        <h1>
+                            Have a project in mind?<br></br>Lets get to <Link style={{ color:"black" }} to="/contact-me"><b>work.</b></Link> 
+                        </h1>
                     </div>
-
-
                 </div>
             )}
         </InView>
