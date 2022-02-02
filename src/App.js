@@ -1,8 +1,6 @@
 import React from "react";
 import "./App.scss";
 import { AnimatePresence } from "framer-motion";
-import { NextSeo } from 'next-seo';
-import Head from 'next/head';
 import Header from "./components/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -15,8 +13,8 @@ function App() {
     <AnimatePresence exitBeforeEnter>
       <Router>
         <div className="App">
-          <Head />
-          <NextSeo
+          
+          {/* <NextSeo
             title="Zinhle Portfolio"
             description="
              HI, I'm <b>Zinhle</b>, I'm a creative, frontend developer, and I make
@@ -51,7 +49,7 @@ function App() {
               site: '@ZinhleBuhlungu',
               cardType: 'summary_large_image',
             }}
-          />
+          /> */}
           <Header />
           <div className="container">
             <div className="wrapper">
