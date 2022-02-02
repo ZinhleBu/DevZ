@@ -13,18 +13,18 @@ import {
   staggerRevealClose
 } from "./Animations";
 
-import dallas from "../images/dallas.webp";
-import austin from "../images/austin.webp";
-import newyork from "../images/newyork.webp";
-import sanfrancisco from "../images/sanfrancisco.webp";
-import beijing from "../images/beijing.webp";
+import dallas from "../images/vati.png";
+import austin from "../images/jag.jpg";
+import newyork from "../images/cycles.png";
+import sanfrancisco from "../images/art.png";
+import beijing from "../images/can.png";
 
 const cities = [
-  { name: "Dallas", image: dallas },
-  { name: "Austin", image: austin },
-  { name: "New York", image: newyork },
-  { name: "San Francisco", image: sanfrancisco },
-  { name: "Beijing", image: beijing }
+  { name: "Web Design", image: dallas },
+  { name: "UX/UI", image: austin },
+  { name: "Branding", image: newyork },
+  { name: "Illustrations", image: sanfrancisco },
+  { name: "Motion Graphics", image: beijing }
 ];
 
 const Hamburger = ({ state }) => {
@@ -83,7 +83,7 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line1 = el)}
-                      to='/opportunities'>
+                      to='/about'>
                       About Me
                     </Link>
                   </li>
@@ -92,7 +92,7 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line2 = el)}
-                      to='/solutions'>
+                      to='/work'>
                       Projects
                     </Link>
                   </li>
@@ -101,7 +101,7 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line3 = el)}
-                      to='/contact-us'>
+                      to='/contact-me'>
                       Contact Me
                     </Link>
                   </li>
@@ -117,7 +117,7 @@ const Hamburger = ({ state }) => {
                 </p>
               </div>
               <div className='locations'>
-                Locations:
+                What I do:
                 {/* Returning the list of cities */}
                 {cities.map(el => (
                   <span
