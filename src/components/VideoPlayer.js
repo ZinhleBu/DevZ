@@ -20,14 +20,11 @@ const VideoPlayer = () => {
                 </Video>
 
                 </div>
-
-                <div className="last-row">
-                    <div className="vid2">
+                <div className="vid2">
                         <Video
                             loop
                             width="100%"
                             muted={true}
-
                             autoPlay={true} data-cld-autoplay-mode="on-scroll"
                             publicId="https://res.cloudinary.com/database1z/video/upload/v1643638610/Portfolio%20site/final_render_moojnv.mp4"
                             format="mp4"
@@ -39,7 +36,6 @@ const VideoPlayer = () => {
                     </div>
 
 
-                </div>
 
             </div>
 

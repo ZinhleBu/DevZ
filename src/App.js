@@ -13,43 +13,6 @@ function App() {
     <AnimatePresence exitBeforeEnter>
       <Router>
         <div className="App">
-          
-          {/* <NextSeo
-            title="Zinhle Portfolio"
-            description="
-             HI, I'm <b>Zinhle</b>, I'm a creative, frontend developer, and I make
-            clean, modern custom websites. My skills also include Motion graphics and animation."
-            canonical="https://www.zinhle.dev/"
-            additionalMetaTags="google-site-verification" 
-            openGraph={{
-              url: 'https://www.zinhle.dev/',
-              title: 'Zinhle Portfolio Site',
-              description: 'I make clean, modern custom website designs.',
-              images: [
-                {
-                  url: 'https://www.zinhle.dev/thema-agency.jpg',
-                  width: 800,
-                  height: 600,
-                  alt: 'Thema Agency',
-                  type: 'image/jpeg',
-                },
-                {
-                  url: 'https://www.zinhle.dev/thema-agency.jpg/jag.jpg',
-                  width: 900,
-                  height: 800,
-                  alt: 'Johannesburg Art Gallery',
-                  type: 'image/jpeg',
-                },
-                { url: 'https://www.zinhle.dev/2583.jpg' },
-              ],
-              site_name: 'DevZ',
-            }}
-            twitter={{
-              handle: '@ZinhleBuhlungu',
-              site: '@ZinhleBuhlungu',
-              cardType: 'summary_large_image',
-            }}
-          /> */}
           <Header />
           <div className="container">
             <div className="wrapper">
@@ -69,7 +32,5 @@ function App() {
     </AnimatePresence>
   );
 }
-
-
 
 export default App;
