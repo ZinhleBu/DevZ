@@ -2,7 +2,6 @@ import React from "react";
 import { Parallax } from "react-parallax";
 import { InView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import data from "../utils/data";
 
 import {
 
