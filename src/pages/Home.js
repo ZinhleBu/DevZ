@@ -53,9 +53,18 @@ function Home() {
                                 to='/work'
                             >
                                 <Parallax bgImage={imageDemo} strength={200}>
-                                    <div style={{ width: 1680, height: 600 }}>
+                                    <div style={{ height: 600, width: 1200 }}>
                                         <div className="container-title"
-                                            ></div>
+                                            style={{
+                                                fontSize: "34px",
+                                                fontFamily: "Roboto",
+                                                fontWeight: "regular",
+                                                color: "white",
+                                                width: 300,
+                                                position: " absolute",
+                                                top: "20%",
+                                                left: "70%",
+                                            }}></div>
                                     </div>
                                 </Parallax>
                             </Link>
