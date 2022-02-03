@@ -8,16 +8,17 @@ export const Footer = () => {
     return (
         <div>
             <footer>
-                <section className="footerSec" id="sec1" >
+                <section className="footerSec"  >
                     <Link to='/'>
                         <Image
+                        id="sec1"
                             src={footerLogo}
                             width={100}
                         />
                     </Link>
                 </section>
                 <section className="footerSec">
-                    <p>Copyright Zinhle.dev 2022</p>
+                    <p id="copyright">Copyright Zinhle.dev 2022</p>
                 </section>
                 <section className="footerSec">
                 <Link

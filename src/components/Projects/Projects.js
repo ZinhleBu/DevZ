@@ -17,7 +17,7 @@ const projects = [
         category: 'Web Design, UX/UI',
         image: '/thema-landing.jpg',
         brand: 'Thema Agency',
-        description: 'I created this website design as an upgrade to their current website. ',
+        description: 'A website design for a made up agency. ',
     },
 ];
 
