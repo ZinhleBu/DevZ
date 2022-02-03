@@ -1,18 +1,20 @@
-const data = {
-    products: [
-        {
-            name: 'Tall Glass Bottle',
-            slug: 'tall-glass',
-            category: 'Water Bottles',
-            image: '/images/products/product1.jpg',
-            price: 20,
-            brand: 'Vati',
-            rating: 4.5,
-            numReviews: 10,
-            countInStock: 20,
-            description: 'A clean and tall water bottle.',
-        },
-    ],
-};
 
-export default data;
+const projects = [
+    {
+        name: 'Johannesburg Art Gallery Website',
+        slug: 'jag',
+        category: 'Web Design, UX/UI',
+        image: '/images/jag.jpg',
+        brand: 'Johannesburg Art Gallery',
+        description: 'I created this website design as an upgrade to their current website. ',
+    },
+    {
+        name: 'Thema Agency Website Design',
+        slug: 'thema',
+        category: 'Web Design, UX/UI',
+        image: '/thema-landing.jpg',
+        brand: 'Thema Agency',
+        description: 'A website design for a made up agency. ',
+    },
+];
+export default projects;

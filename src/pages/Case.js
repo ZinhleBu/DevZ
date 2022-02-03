@@ -1,11 +1,11 @@
 import React from 'react'
 
- function About() {
+function Case() {
     return (
         <div>
-            
+            <h1>Hi</h1>
         </div>
     )
 }
 
-export default About;
+export default Case;

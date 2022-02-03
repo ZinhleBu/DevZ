@@ -1,9 +1,9 @@
 import React from 'react';
 import Project from './Project/Project';
 
-
 const projects = [
     {
+        id: '0',
         name: 'Johannesburg Art Gallery Website',
         slug: 'jag',
         category: 'Web Design, UX/UI',
@@ -12,6 +12,7 @@ const projects = [
         description: 'I created this website design as an upgrade to their current website. ',
     },
     {
+        id: '1',
         name: 'Thema Agency Website Design',
         slug: 'thema',
         category: 'Web Design, UX/UI',
@@ -19,12 +20,14 @@ const projects = [
         brand: 'Thema Agency',
         description: 'A website design for a made up agency. ',
     },
+    
 ];
 
 const Projects = () => {
     return (
         <main>
             <div className="container">
+         
                 {projects.map((project) => (
                     <div item key={project.id}>
                         <Project project={project} />

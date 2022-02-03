@@ -1,37 +1,79 @@
 import React from 'react'
 import { Parallax } from "react-parallax";
-const Project = ({ project }) => {
-    return (
-        <div className="project-hero">
-            <div className="container">
-                <h1 style={{
-                    marginBottom: "4rem"
-                }}>
-                    <h1>{project.name}</h1>
-                    
-                    <p>Category: {project.category}</p>
-                    <p>Brand: {project.brand}</p>
-                    <p>Description: {project.description}</p>
-                </h1>
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
-                <Parallax bgImage={project.image} strength={200} style={{ borderRadius: "18px" }}>
-                    <div style={{ height: 600, width: 1200 }}>
-                        <div className="container-title"
-                            style={{
-                                fontSize: "34px",
-                                fontFamily: "Roboto",
-                                fontWeight: "regular",
-                                color: "white",
-                                width: 300,
-                                position: " absolute",
-                                top: "20%",
-                                left: "70%",
-                            }}></div>
+const Project = ({ project }) => {
+
+    return (
+        <AnimatePresence exitBeforeEnter>
+            <div className="project-hero">
+                <div className="container">
+                    <motion.h1
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ delay: .4, duration: .4 }}
+                        style={{
+                            marginBottom: "4rem"
+                        }}
+                    >{project.name}</motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ delay: .5, duration: .4 }}
+                    >Category: {project.category}</motion.p>
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ delay: .5, duration: .4 }}
+                    >Brand: {project.brand}</motion.p>
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ delay: .5, duration: .4 }}
+                    >Description: {project.description}</motion.p>
+
+                    <Link
+                    to="/case"
+                    >
+
+                    <p>see more</p>
+                    </Link>
+
+                    <div>
                     </div>
-                </Parallax>
+
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ delay: .5, duration: .4 }}
+                    >
+                        <Parallax bgImage={project.image} strength={200} style={{ borderRadius: "18px" }}>
+                            <motion.div style={{ height: 600, width: 1200 }}>
+                                <div className="container-title"
+                                    style={{
+                                        fontSize: "34px",
+                                        fontFamily: "Roboto",
+                                        fontWeight: "regular",
+                                        color: "white",
+                                        width: 300,
+                                        position: " absolute",
+                                        top: "20%",
+                                        left: "70%",
+                                    }}></div>
+                            </motion.div>
+                        </Parallax>
+                    </motion.div>
+                </div>
             </div>
-        </div>
+        </AnimatePresence>
+
     )
 }
 
-export default Project
+export default Project;
