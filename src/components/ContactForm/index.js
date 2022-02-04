@@ -116,7 +116,7 @@ class ContactForm extends Component {
                     </div>
                     <div className="form-sec">
                         <div className="form-submit">
-                            <button type="submit" className="theme-btn">Send Message</button>
+                            <button type="submit" className="btn-submit"><p>Send message</p></button>
                         </div>
                     </div>
                 </div>

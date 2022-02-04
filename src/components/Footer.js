@@ -33,7 +33,8 @@ export const Footer = () => {
                             marginRight: "10px"
 
                         }}
-                        to='/'>
+                        to={{ pathname: "https://www.behance.net/ZinhleBu" }} target="_blank"
+                    >
                         <p >BeHance</p>
                     </Link>
                     <Link
@@ -45,7 +46,8 @@ export const Footer = () => {
                             marginLeft: "10px",
                             marginRight: "10px"
                         }}
-                        to='/'>
+                        to={{ pathname: "https://www.instagram.com/_dintle/" }} target="_blank"
+                    >
                         <p >Instagram</p>
                     </Link>
                     <Link
