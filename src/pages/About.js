@@ -61,7 +61,7 @@ function About() {
                 <div className="about-sub">
                     <h1>My career so far..</h1>
                     <p>
-                        Always up for a challenge, I studied Interactive design at the Iniversity of Johannesburg, South Africa. I have worked as a freelancer and at an agency for over 3 years, i oversaw Website designs for clients, mainated their web presence and content. Currently I am working for a Design agency in Johannesburg making cistom websites and a bit of animation and motion graphics.
+                        Always up for a challenge, I studied Interactive design at the University of Johannesburg, South Africa. I have worked as a freelancer and at an agency for over 3 years, I oversaw Website designs for clients, maintained their web presence and content. Currently I am working for a Design agency in Johannesburg making custom websites and a bit of animation and motion graphics.
                     </p>
                 </div>
                 <div className="tags">
@@ -79,8 +79,7 @@ function About() {
                     exit={{ opacity: 0 }}
                     transition={{ delay: .4, duration: .3 }}
                 >
-                    Hiring?<br></br>Lets get to
-                    <Link
+                    Hiring?<br></br>Lets get to <Link
                         style={{ color: "black" }}
                         to="/contact-me">
                         <b>work.</b>
