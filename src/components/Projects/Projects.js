@@ -29,7 +29,7 @@ const Projects = () => {
             <div className="container">
          
                 {projects.map((project) => (
-                    <div item key={project.id}>
+                    <div item="true" key={project.id}>
                         <Project project={project} />
                     </div>
                 ))}

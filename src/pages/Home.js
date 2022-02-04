@@ -2,7 +2,6 @@ import React from "react";
 import { Parallax } from "react-parallax";
 import { InView } from "react-intersection-observer";
 import { motion, AnimatePresence } from "framer-motion";
-
 import {
 
     handleHover,
@@ -11,12 +10,18 @@ import {
 } from "../components/Animations";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
-
 function Home() {
 
     const imageDemo = "../thema-landing.jpg";
     const image2 = "../dark.jpg";
     const image3 = "../jag.jpg";
+    const arrow = "../icons/arrow-pointer.png";
+    const edit = "../icons/edit.png";
+    const program = "../icons/programming.png";
+    const stat = "../icons/strategy1.png";
+    const art1 = "../../images/art.png";
+    const art2 = "../../images/art2.JPG";
+    const art3 = "../../images/art3.jpg";
 
 
 
@@ -53,7 +58,7 @@ function Home() {
                                 to='/work'
                             >
                                 <Parallax bgImage={imageDemo} strength={200}>
-                                    <div style={{ height: 600, width: 1200 }}>
+                                    <div style={{ height: 600, width: 1600 }}>
                                         <div className="container-title"
                                             style={{
                                                 fontSize: "34px",
@@ -164,6 +169,61 @@ function Home() {
                                 </div>
                             </Parallax>
                         </motion.div>
+
+                        <div className="skillSec">
+                            <div className="skillWrapper">
+                                <div className="skillItem">
+                                    <img className="icon" src={arrow} alt="" />
+                                    <h3>Design</h3>
+                                    <p>Designing layouts and user interfaces for web.</p>
+                                </div>
+                                <div className="skillItem">
+                                    <img className="icon" src={edit} alt="" />
+                                    <h3>Video Editing</h3>
+                                    <p>Motion graphics, Video intos, logo animations and many more.</p>
+                                </div>
+                                <div className="skillItem">
+                                    <img className="icon" src={program} alt="" />
+                                    <h3>Coding</h3>
+                                    <p>Custom website layouts, functionality and analytics to suit your business needs.</p>
+                                </div>
+                                <div className="skillItem">
+                                    <img className="icon" src={stat} alt="" />
+                                    <h3>Planning</h3>
+                                    <p>Thorough planning of branding and marketing strategies.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="illustration">
+                            <motion.h1
+                                initial={{ opacity: 0, scale: 1 }}
+                                animate={inView ? { opacity: 0, scale: 1.1 } : { opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.8, delay: .4 }}
+                                style={{ position: "relative", fontSize: "4rem" }}
+                                onMouseEnter={e => handleHover(e)}
+                                onMouseOut={e => handleHoverExit(e)}
+                            >Illustration</motion.h1>
+                            <div className="artSec">
+                                <Parallax className="art-img" bgImage={art3} strength={100}>
+                                    <div className="art-inner" style={{ height: 400, width: 200, borderRadius: "18px" }}>
+                                        <div></div>
+                                    </div>
+                                </Parallax>
+                                <span style={{ width: "20px"}}></span>
+                                <Parallax className="art-img" bgImage={art1} strength={100}>
+                                    <div className="art-inner" style={{ height: 400, width: 500, borderRadius: "18px" }}>
+                                        <div></div>
+                                    </div>
+                                </Parallax>
+                                <span style={{ width: "20px"}}></span>
+
+                                <Parallax className="art-img" bgImage={art2} strength={100}>
+                                    <div className="art-inner" style={{ height: 400, width: 600, borderRadius: "18px" }}>
+                                        <div></div>
+                                    </div>
+                                </Parallax>
+                            </div>
+                        </div>
                         <div className="banner">
                             <motion.h1
                                 initial={{ opacity: 0 }}
@@ -178,7 +238,6 @@ function Home() {
                 )}
             </InView>
         </AnimatePresence>
-
     );
 
 }

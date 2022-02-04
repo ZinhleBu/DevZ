@@ -18,11 +18,11 @@ export const Footer = () => {
                     </Link>
                 </section>
 
-                <section className="footerSec">
+                <section className="footerSec ">
                     <p id="copyright">Copyright Zinhle.dev 2022</p>
                 </section>
 
-                <section className="footerSec">
+                <section className="footerSec socials">
                     <Link
                         style={{
                             fontFamily: "Poppins",
