@@ -256,6 +256,7 @@
         flex-direction: row;
         justify-content: space-around;
         min-height: 100%;
+        margin-top: 20px;
         @media(max-width: $lg) {
             flex-direction: column;
         }
@@ -285,14 +286,13 @@
         flex-direction: row;
         flex: 1;
         justify-content: space-around;
-        margin: 100px 0 50px 0;
+        margin: 100px 0 0px 0;
         @media(max-width: $lg) {
             flex-direction: column;
         }
         .about-sub {
             min-height: 100%;
             max-width: 50%;
-            margin: 50px;
             @media(max-width: $lg) {
                 max-width: 100%;
             }
@@ -514,19 +514,11 @@
         h1 {
             position: relative;
             min-width: 100%;
-            @media(min-width: $xm) {
-                width: 290px;
-                font-size: 40px;
-            }
-            @media(min-width: $sm) {
-                width: 350px;
-                font-size: 50px;
-            }
             @media(min-width: $md) {
-                font-size: 60px;
+                min-width: 100%;
             }
             @media(min-width: $lg) {
-                font-size: 100px;
+                min-width: 100%;
             }
         }
         .artSec {
