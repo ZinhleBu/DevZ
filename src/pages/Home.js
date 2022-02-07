@@ -199,7 +199,7 @@ function Home() {
                                 initial={{ opacity: 0, scale: 1 }}
                                 animate={inView ? { opacity: 0, scale: 1.1 } : { opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.8, delay: .4 }}
-                                style={{ position: "relative", fontSize: "4rem" }}
+                                style={{ position: "relative" }}
                                 onMouseEnter={e => handleHover(e)}
                                 onMouseOut={e => handleHoverExit(e)}
                             >Illustration</motion.h1>

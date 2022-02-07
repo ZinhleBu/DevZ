@@ -65,16 +65,7 @@
                 h5 {
                     font-size: 24px;
                     font-weight: 600;
-                    width: 300px;
-                    @media(max-width: $xm) {
-                        width: 150px;
-                    }
-                    @media(min-width: $sm) {
-                        width: 290px;
-                    }
-                    @media(min-width: $md) {
-                        width: 769px;
-                    }
+                    width: 100%;
                 }
             }
         }
@@ -343,24 +334,21 @@
         min-width: 100%;
         border-radius: 18px;
         position: relative;
-        background-color: #d7d7d7;
         display: flex;
         overflow: hidden;
         justify-content: center;
-        justify-content: space-around;
     }
     
     .cta {
-        min-width: 80vw;
+        min-width: 100%;
         min-height: 100%;
         margin: 0 auto;
         margin-top: 100px;
         margin-bottom: 100px;
-        padding: 2rem 2rem 2rem 2rem;
         border-radius: 18px;
         position: relative;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         @media(max-width: $md) {
             height: 100%;
         }
@@ -369,22 +357,20 @@
         }
         .cta-inner {
             position: relative;
-            width: 300px;
             top: 20%;
+            max-width: 30%;
+            margin: 2rem;
             height: 100%;
-            padding: 2rem 2rem 3rem 2rem;
+            @media(max-width: $lg) {
+                max-width: 100%;
+            }
         }
         .cta-img {
             position: relative;
             border-radius: 18px;
             @media(max-width: $lg) {
                 flex-direction: column;
-                width: 450px;
-                top: 20%;
-            }
-            @media(max-width: $md) {
-                flex-direction: column;
-                width: 350px;
+                min-width: 100%;
                 top: 20%;
             }
             .img-inner {
@@ -417,7 +403,7 @@
             width: 100%;
         }
         h1 {
-            width: 400px;
+            min-width: 100%;
             @media(min-width: $xm) {
                 width: 290px;
                 font-size: 40px;
@@ -458,23 +444,9 @@
     }
     
     .mock {
-        width: 100%;
+        min-width: 100%;
         position: relative;
         margin-bottom: 100px;
-        @media(max-width: $xm) {
-            top: 40%;
-            width: 200px;
-        }
-        @media(max-width: $sm) {
-            top: 50%;
-            width: 300px;
-        }
-        @media(min-width: $md) {
-            width: 400px;
-        }
-        @media(min-width: $lg) {
-            width: 100%;
-        }
     }
     
     .video-sec {
@@ -488,8 +460,6 @@
             overflow: hidden;
             @media(max-width: $bg) {
                 flex-direction: column;
-                margin-left: 50px;
-                margin-right: 50px;
             }
             .vid1 {
                 width: 100%;
@@ -543,18 +513,31 @@
         }
         h1 {
             position: relative;
-            font-size: 4rem;
+            min-width: 100%;
+            @media(min-width: $xm) {
+                width: 290px;
+                font-size: 40px;
+            }
+            @media(min-width: $sm) {
+                width: 350px;
+                font-size: 50px;
+            }
+            @media(min-width: $md) {
+                font-size: 60px;
+            }
+            @media(min-width: $lg) {
+                font-size: 100px;
+            }
         }
         .artSec {
             display: flex;
             flex-direction: row;
+            gap: 5px;
             justify-content: center;
             @media(max-width: $md) {
-                margin: 20px;
                 flex-direction: column;
             }
             .art-img {
-                margin: 20px;
                 position: relative;
                 border-radius: 18px;
             }

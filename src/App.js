@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
+import Case from "./pages/Case";
+
 import { Footer } from "./components/Footer";
 import Lottie from "lottie-react";
 import loadAnimation from "./utils/load.json";
@@ -40,6 +42,7 @@ function App() {
                   <Route exact path="/about" component={About} />
                   <Route exact path="/work" component={Work} />
                   <Route exact path="/contact-me" component={Contact} />
+                  <Route exact path="/case" component={Case} />
                 </Switch>
 
               </div>
