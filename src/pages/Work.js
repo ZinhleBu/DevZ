@@ -17,18 +17,29 @@ function Work() {
     const art2 = "../../images/art2.JPG";
     const art3 = "../../images/art3.jpg";
 
+    const genKey = () => {
+        return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+      }
+      console.log(genKey);
+    
 
     return (
-        <div>
+        <motion.div
+        key={genKey()}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: .2, duration: .2 }}
+        >
             <Projects />
             <div className="video-sec">
-                <h1>Video Production</h1>
+                <h1>Video & Animation</h1>
                 <h2>3D and 2D animation</h2>
-                <p>Some of my animation work ive done in the past year.</p>
+                <p>Some of my animation work I've done in the past few year.</p>
                 <VideoPlayer />
                 <div className="links">
                     <Link
-                        to='/work'
+                        to='/video'
                         style={{
                             color: "#000000",
                         }}>
@@ -67,8 +78,19 @@ function Work() {
                         </div>
                     </Parallax>
                 </div>
+                <div className="links">
+                    <Link
+                        to='/illustrations'
+                        style={{
+                            color: "#000000",
+                        }}>
+                        <p>
+                            See more
+                        </p>
+                    </Link>
+                </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

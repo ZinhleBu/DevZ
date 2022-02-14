@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Video, CloudinaryContext, Transformation } from "cloudinary-react";
+
 const VideoPlayer = () => {
     return (
         <CloudinaryContext cloud_name="icultivate">
@@ -18,7 +19,6 @@ const VideoPlayer = () => {
                 >
                     <Transformation quality="10" videoCodec="h264" />
                 </Video>
-
                 </div>
                 <div className="vid2">
                         <Video

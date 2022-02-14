@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import { Parallax } from "react-parallax";
 import { InView } from "react-intersection-observer";
 import { motion, AnimatePresence } from "framer-motion";
@@ -24,15 +24,21 @@ function Home() {
     const art3 = "../../images/art3.jpg";
 
 
+    const genKey = () => {
+        return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+      }
+      console.log(genKey);
 
     return (
+        <Fragment>
         <AnimatePresence>
-
             <InView threshold={0.045}>
                 {({ ref, inView }) => (
                     <div >
                         <div className="top-hero">
                             <motion.h5
+                                                          key={genKey()}
+
                                 initial={{ opacity: 0, top: -10 }}
                                 animate={{ opacity: 1, top: 10 }}
                                 exit={{ opacity: 0, top: -10 }}
@@ -42,6 +48,8 @@ function Home() {
                                 clean, modern custom websites. My skills also include Motion graphics and animation.
                             </motion.h5>
                             <motion.h1
+                                                          key={genKey()}
+
                                 initial={{ opacity: 0, top: -10 }}
                                 animate={{ opacity: 1, top: 10 }}
                                 exit={{ opacity: 0, top: -10 }}
@@ -49,6 +57,8 @@ function Home() {
                             >Projects</motion.h1>
                         </div>
                         <motion.div
+                              key={genKey()}
+
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
@@ -168,6 +178,24 @@ function Home() {
                                     <div > </div>
                                 </div>
                             </Parallax>
+                            <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ delay: .4, duration: .3 }}
+                            className="links">
+                            <Link
+                                to='/jag'
+                                style={{
+                                    color: "#000000",
+                                    textDecoration: "none"
+                                }}>
+
+                                <p>
+                                    See more
+                                </p>
+                            </Link>
+                        </motion.div>
                         </motion.div>
 
                         <div className="skillSec">
@@ -205,24 +233,43 @@ function Home() {
                             >Illustration</motion.h1>
                             <div className="artSec">
                                 <Parallax className="art-img" bgImage={art3} strength={100}>
-                                    <div className="art-inner" style={{ height: 400, width: 200, borderRadius: "18px" }}>
+                                    <div className="art-inner" style={{ height: 400, width: 400, borderRadius: "18px" }}>
                                         <div></div>
                                     </div>
                                 </Parallax>
                                 <span style={{ width: "20px"}}></span>
                                 <Parallax className="art-img" bgImage={art1} strength={100}>
-                                    <div className="art-inner" style={{ height: 400, width: 500, borderRadius: "18px" }}>
+                                    <div className="art-inner" style={{ height: 400, width: 400, borderRadius: "18px" }}>
                                         <div></div>
                                     </div>
                                 </Parallax>
                                 <span style={{ width: "20px"}}></span>
 
                                 <Parallax className="art-img" bgImage={art2} strength={100}>
-                                    <div className="art-inner" style={{ height: 400, width: 600, borderRadius: "18px" }}>
+                                    <div className="art-inner" style={{ height: 400, width: 400, borderRadius: "18px" }}>
                                         <div></div>
                                     </div>
                                 </Parallax>
                             </div>
+                            
+                            <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ delay: .4, duration: .3 }}
+                            className="links">
+                            <Link
+                                to='/illustrations'
+                                style={{
+                                    color: "#000000",
+                                    textDecoration: "none"
+                                }}>
+
+                                <p>
+                                    See more
+                                </p>
+                            </Link>
+                        </motion.div>
                         </div>
                         <div className="banner">
                             <motion.h1
@@ -238,6 +285,7 @@ function Home() {
                 )}
             </InView>
         </AnimatePresence>
+        </Fragment>
     );
 
 }
