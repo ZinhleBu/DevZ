@@ -54,14 +54,14 @@ const projects = [
     //     brand: 'Imbeu Development and Project Management',
     //     description: 'Created a website for Imbeu Development and Project Management - pty. ',
     // },
-    {
-        name: 'React Hooks',
-        slug: 'react',
-        category: 'Coding, ',
-        image: '/react-landing.jpg',
-        url: "/hooks",
-        brand: 'React',
-        description: 'List of react hooks and what they do. ',
-    },
+    // {
+    //     name: 'React Hooks',
+    //     slug: 'react',
+    //     category: 'Coding, ',
+    //     image: '/react-landing.jpg',
+    //     url: "/hooks",
+    //     brand: 'React',
+    //     description: 'List of react hooks and what they do. ',
+    // },
 ];
 export default projects;
