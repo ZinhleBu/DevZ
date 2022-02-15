@@ -66,7 +66,7 @@ function Home() {
                                     to='/work'
                                 >
                                     <Parallax bgImage={imageDemo} strength={200}>
-                                        <div style={{ height: 600, width: 1600 }}>
+                                        <div style={{ height: 500, width: 1600 }}>
                                             <div className="container-title"
                                                 style={{
                                                     fontSize: "34px",

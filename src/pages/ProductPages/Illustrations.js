@@ -24,7 +24,12 @@ const Illustrations = () => {
 
   return (
 
-    <div className="illustrations-wrapper">
+    <motion.div 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.8, delay: .4 }}
+    className="illustrations-wrapper">
       <Link
         to='/work'
         style={{
@@ -124,7 +129,7 @@ const Illustrations = () => {
           </motion.p>
         </Link>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
