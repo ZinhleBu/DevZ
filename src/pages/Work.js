@@ -39,7 +39,7 @@ function Work() {
                 <VideoPlayer />
                 <div className="links">
                     <Link
-                        to='/video'
+                        to='/videopage'
                         style={{
                             color: "#000000",
                         }}>

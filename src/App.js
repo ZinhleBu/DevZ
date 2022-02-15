@@ -14,7 +14,6 @@ import loadAnimation from "./utils/load.json";
 import Illustrations from "./pages/ProductPages/Illustrations";
 import Jag from "./pages/ProductPages/Jag";
 import Thema from "./pages/ProductPages/Thema";
-import Video from "./pages/ProductPages/Video";
 import Fundi from "./pages/ProductPages/Fundi";
 import Gryphon from "./pages/ProductPages/Gryphon";
 import Imbeu from "./pages/ProductPages/Imbeu";
@@ -22,7 +21,7 @@ import NoahCap from "./pages/ProductPages/NoahCap";
 import Vati from "./pages/ProductPages/Vati";
 import Iwesizwe from "./pages/ProductPages/Iwesizwe";
 import Hooks from "./pages/ProductPages/Hooks";
-import VideoPage from "./pages/ProductPages/Video";
+import VideoPage from "./pages/ProductPages/VideoPage";
 
 function App() {
 
@@ -77,7 +76,7 @@ function App() {
                   <Route exact path="/vati" component={Vati} />
                   <Route exact path="/iwesizwe" component={Iwesizwe} />
                   <Route exact path="/hooks" component={Hooks} />
-                  <Route exact path="/video" component={VideoPage} />
+                  <Route exact path="/videopage" component={VideoPage} />
                 </Switch>
               </div>
             </div>
