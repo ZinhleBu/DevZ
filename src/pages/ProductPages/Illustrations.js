@@ -7,6 +7,7 @@ import {
   handleHoverExit
 
 } from "../../components/Animations";
+import { Link } from 'react-router-dom';
 
 
 const Illustrations = () => {
@@ -22,15 +23,28 @@ const Illustrations = () => {
   const art9 = "../../images/golden.png";
 
   return (
+
     <div className="illustrations-wrapper">
-       <motion.h1
-          initial={{ opacity: 0, scale: 1 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: .4 }}
-          style={{ position: "relative", fontSize: "2rem" }}
-          onMouseEnter={e => handleHover(e)}
-          onMouseOut={e => handleHoverExit(e)}
-        >Illustration</motion.h1>
+      <Link
+        to='/work'
+        style={{
+          color: "#000000",
+          textDecoration: "none",
+        }}>
+        <motion.p
+          whileHover={{ color: "#e20001" }}
+          className="links">
+          Back to projects
+        </motion.p>
+      </Link>
+      <motion.h1
+        initial={{ opacity: 0, scale: 1 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: .4 }}
+        style={{ position: "relative", fontSize: "2rem" }}
+        onMouseEnter={e => handleHover(e)}
+        onMouseOut={e => handleHoverExit(e)}
+      >Illustration</motion.h1>
       <div className="illustration">
         <div className="artSec">
           <Parallax className="art-img" bgImage={art3} strength={100}>
@@ -93,6 +107,22 @@ const Illustrations = () => {
             </div>
           </Parallax>
         </div>
+        <Link
+          to={{ pathname: "https://www.instagram.com/_dintle/" }} target="_blank"
+          style={{
+            color: "#000000",
+            textDecoration: "none",
+          }}>
+          <motion.p
+            whileHover={{ color: "#e20001" }}
+            className="links"
+            style={{
+              position: "relative"
+              , textAlign: "center", marginTop: "50px"
+            }}>
+            - View on Instagram
+          </motion.p>
+        </Link>
       </div>
     </div>
   )

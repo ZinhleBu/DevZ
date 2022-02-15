@@ -32,7 +32,7 @@ const projects = [
         slug: 'gryphon',
         category: 'Web Design, UX/UI, Wordpress',
         image: '/gryphon-landing.jpg',
-        url: "/gryphon-lounge",
+        url: "/gryphon",
         brand: 'The Gryphon Lounge',
         description: 'Website for a brand and digital agency in Johannesburg.',
     },

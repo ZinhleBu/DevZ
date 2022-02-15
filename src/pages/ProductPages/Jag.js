@@ -16,6 +16,18 @@ const Jag = () => {
         exit={{ opacity: 0 }}
         transition={{ delay: .4, duration: .4 }}
         className="container">
+          <Link
+          to='/work'
+          style={{
+            color: "#000000",
+            textDecoration: "none",
+          }}>
+          <motion.p
+            whileHover={{ color: "#e20001" }}
+            className="links">
+            Back to projects
+          </motion.p>
+        </Link>
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

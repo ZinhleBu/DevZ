@@ -32,7 +32,7 @@ const Gryphon = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ delay: .4, duration: .4 }}
-        >Fundi Foundation</motion.h1>
+        >The Gryphon Lounge Website</motion.h1>
         <Link
 
           to={{ pathname: "https://www.thegryphonlounge.co.za" }} target="_blank"
@@ -54,7 +54,12 @@ const Gryphon = () => {
             <h2>Project details</h2>
             <p>Created by: Zinhle Buhlungu</p>
             <p>Year: 2021</p>
-            <p>Company: Fundi </p>
+            <p>Company: The Gryphone lounge </p>
+            <h2>Tools used</h2>
+            <p>- Wordpress</p>
+            <p>- PhP</p>
+            <p>- Theme Forest</p>
+            <p>- Envato</p>
             <Link
               to='/'
               style={{
@@ -71,12 +76,8 @@ const Gryphon = () => {
           <div className="project-details">
             <h2>Purpose of the project</h2>
             <p>
-              I built and designed this website for the Fundi Foundation.             </p>
-            <h2>Tools used</h2>
-            <p>- Wordpress</p>
-            <p>- PhP</p>
-            <p>- Theme Forest</p>
-            <p>- Envato</p>
+              Designed for a brand and digital agency I currently work at, this website is a custom Wordpress site I designed to showcase the agencies work and enhance their digital presence.<br/>Since launching the site, I have managed to create an average click through rate of 22,4% on average and over 300 impressions. <br/> Making use of wordpress and a theme from Themeforrest , allowing me to create custome page layouts for each page as well as providing a powerfull back-end to manage all conent on the website. </p>
+           
             <Link
               to='/noah'
               style={{

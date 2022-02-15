@@ -22,6 +22,7 @@ import Vati from "./pages/ProductPages/Vati";
 import Iwesizwe from "./pages/ProductPages/Iwesizwe";
 import Hooks from "./pages/ProductPages/Hooks";
 import VideoPage from "./pages/ProductPages/VideoPage";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
 
@@ -62,6 +63,7 @@ function App() {
             <div className="wrapper">
               <div className="home">
                 <Switch>
+                <ScrollToTop>
                   <Route exact path="/" component={Home} />
                   <Route exact path="/about" component={About} />
                   <Route exact path="/work" component={Work} />
@@ -77,6 +79,7 @@ function App() {
                   <Route exact path="/iwesizwe" component={Iwesizwe} />
                   <Route exact path="/hooks" component={Hooks} />
                   <Route exact path="/videopage" component={VideoPage} />
+                  </ScrollToTop>
                 </Switch>
               </div>
             </div>

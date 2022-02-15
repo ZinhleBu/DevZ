@@ -108,12 +108,13 @@ const Hamburger = ({ state }) => {
                 </ul>
               </nav>
               <div ref={el => (info = el)} className='info'>
-                <h3>Our Promise</h3>
+                <h3>Contact meee!</h3>
                 <p>
-                  The passage experienced a surge in popularity during the 1960s
-                  when Letraset used it on their dry-transfer sheets, and again
-                  during the 90s as desktop publishers bundled the text with
-                  their software.
+                 zbuhlungu1@gmail.com
+                 <br/>
+                 Whatsapp: 0609042986
+                 <br/>
+                 Cell: (27+) 79 133 1180
                 </p>
               </div>
               <div className='locations'>
