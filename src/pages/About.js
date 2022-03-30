@@ -1,8 +1,8 @@
 import React from 'react'
+import Head from 'next/head'
 import { Parallax } from "react-parallax";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import Head from 'next/head';
 
 import Tag from '../components/Tag';
 
@@ -57,7 +57,6 @@ function About() {
                 />
            
             </Head>
-        <div>
             <div className="aboutHero">
 
                 <Parallax className="about-img" bgImage={zee} strength={200}>
@@ -99,7 +98,6 @@ function About() {
                     </Link>
                 </motion.h1>
             </div>
-        </div>
         </>
     )
 }
