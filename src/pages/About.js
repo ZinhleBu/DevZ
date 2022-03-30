@@ -2,7 +2,7 @@ import React from 'react'
 import { Parallax } from "react-parallax";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import Head from 'next/head'
+import Head from 'next/head';
 
 import Tag from '../components/Tag';
 
@@ -45,6 +45,7 @@ function About() {
     const zee = "../zee.jpg";
 
     return (
+        <>
         <div>
             <Head>
                 <title>About</title>
@@ -99,6 +100,7 @@ function About() {
                 </motion.h1>
             </div>
         </div>
+        </>
     )
 }
 
