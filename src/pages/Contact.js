@@ -7,6 +7,7 @@ import Head from 'next/head'
 
 function Contact() {
     return (
+        <>
         <div>
              <Head>
                 <title>Contact</title>
@@ -45,6 +46,7 @@ function Contact() {
             </motion.div>
 
         </div>
+        </>
     )
 }
 
