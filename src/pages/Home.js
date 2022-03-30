@@ -9,8 +9,7 @@ import {
 
 } from "../components/Animations";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import Head from 'next/head'
-
+import { Helmet } from 'react-helmet';
 function Home() {
 
     const imageDemo = "../thema-landing.jpg";
@@ -32,7 +31,7 @@ function Home() {
 
     return (
         <Fragment>
-            <Head>
+            <Helmet>
                 <title>Home</title>
                 <meta name="description" content="HI, I'm <b>Zinhle</b>, I'm a creative, frontend developer, and I make clean, modern custom websites. My skills also include Motion graphics and animation." />
                 <meta name="robots" content="index,follow" />
@@ -45,7 +44,7 @@ function Home() {
                     key="canonical"
                 />
 
-            </Head>
+            </Helmet>
             <AnimatePresence>
                 <InView threshold={0.045}>
                     {({ ref, inView }) => (

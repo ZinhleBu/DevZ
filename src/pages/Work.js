@@ -4,7 +4,7 @@ import VideoPlayer from "../components/VideoPlayer";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { Parallax } from "react-parallax";
 import { motion } from "framer-motion";
-import Head from 'next/head'
+import { Helmet } from 'react-helmet';
 
 import {
 
@@ -25,7 +25,7 @@ function Work() {
 
     return (
         <>
-        <Head>
+        <Helmet>
         <title>Projects</title>
         <meta name="description" content="Check out some of the projects I have worked on in the past few years." />
         <meta name="robots" content="index,follow" />
@@ -38,7 +38,7 @@ function Work() {
           key="canonical"
         />
 
-      </Head>
+      </Helmet>
         <motion.div
         key={genKey()}
         initial={{ opacity: 0 }}

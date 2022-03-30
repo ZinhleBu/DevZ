@@ -2,13 +2,14 @@ import React from 'react'
 import { Parallax } from "react-parallax";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Fundi = () => {
   const fundi = "../../fundi-landing.png";
 
   return (
     <>
-      <Head>
+      <Helmet>
         <title>Projects - Fundi Foundation</title>
         <meta name="description" content=" I built and designed this website for the Fundi Foundation. They hold multiple charities for school kids who want to enable their education. The foundation needed a site that can represent their brand and convey their message clearly. I decided to create the site using Next.js as this would allow me to create the complicated compenents needed to create the site. I worked with talented graphic designer and creative team to deliver the website. my role was basic layout and design as well as development." />
         <meta name="robots" content="index,follow" />
@@ -21,7 +22,7 @@ const Fundi = () => {
           key="canonical"
         />
 
-      </Head>
+      </Helmet>
       <div className="project-hero">
         <motion.div
           initial={{ opacity: 0 }}

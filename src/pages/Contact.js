@@ -3,12 +3,12 @@ import ContactForm from '../components/ContactForm'
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import cube from "../utils/cube.json";
-import Head from 'next/head'
+import { Helmet } from 'react-helmet';
 
 function Contact() {
     return (
         <>
-             <Head>
+             <Helmet>
                 <title>Contact</title>
                 <meta name="description" content="Drop me an email at zbuhlungu1@gmail.com, and lets get your project started." />
                 <meta name="robots" content="index,follow" />
@@ -21,7 +21,7 @@ function Contact() {
                     key="canonical"
                 />
 
-            </Head>
+            </Helmet>
         <div>
             <motion.div
                 initial={{ opacity: 0 }}

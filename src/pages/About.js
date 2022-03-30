@@ -1,8 +1,8 @@
 import React from 'react'
-import Head from 'next/head'
 import { Parallax } from "react-parallax";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Helmet } from 'react-helmet';
 
 import Tag from '../components/Tag';
 
@@ -46,7 +46,7 @@ function About() {
 
     return (
         <>
-            <Head>
+            <Helmet>
                 <title>About</title>
                 <meta name="description" content="Fueled by a passion for designing compelling products, I have a deep desire to excel and continuously improve in my work. " />
                 <meta name="robots" content="index,follow"/>
@@ -56,7 +56,7 @@ function About() {
                     key="canonical"
                 />
            
-            </Head>
+            </Helmet>
             <div className="aboutHero">
 
                 <Parallax className="about-img" bgImage={zee} strength={200}>
