@@ -8,7 +8,6 @@ import Head from 'next/head'
 function Contact() {
     return (
         <>
-        <div>
              <Head>
                 <title>Contact</title>
                 <meta name="description" content="Drop me an email at zbuhlungu1@gmail.com, and lets get your project started." />
@@ -23,6 +22,7 @@ function Contact() {
                 />
 
             </Head>
+        <div>
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

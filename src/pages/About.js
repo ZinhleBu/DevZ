@@ -46,7 +46,6 @@ function About() {
 
     return (
         <>
-        <div>
             <Head>
                 <title>About</title>
                 <meta name="description" content="Fueled by a passion for designing compelling products, I have a deep desire to excel and continuously improve in my work. " />
@@ -58,6 +57,7 @@ function About() {
                 />
            
             </Head>
+        <div>
             <div className="aboutHero">
 
                 <Parallax className="about-img" bgImage={zee} strength={200}>
