@@ -4,7 +4,7 @@ import VideoPlayer from "../components/VideoPlayer";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { Parallax } from "react-parallax";
 import { motion } from "framer-motion";
-
+import Head from 'next/head'
 
 import {
 
@@ -13,6 +13,7 @@ import {
 
 } from "../components/Animations";
 function Work() {
+    
     const art1 = "../../images/art.png";
     const art2 = "../../images/art2.JPG";
     const art3 = "../../images/art3.jpg";
@@ -21,9 +22,23 @@ function Work() {
         return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
       }
       console.log(genKey);
-    
 
     return (
+        <>
+        <Head>
+        <title>Projects</title>
+        <meta name="description" content="Check out some of the projects I have worked on in the past few years." />
+        <meta name="robots" content="index,follow" />
+        <meta name="keywords" content="Fundi Foundation, Projects, Web Design, UX, UI, Design, Adobe XD, Coding" />
+        <meta name="author" content="Zinhle Buhlungu" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="canonical"
+          href="https://www.zinhle.dev/work"
+          key="canonical"
+        />
+
+      </Head>
         <motion.div
         key={genKey()}
         initial={{ opacity: 0 }}
@@ -91,6 +106,7 @@ function Work() {
                 </div>
             </div>
         </motion.div>
+        </>
     )
 }
 

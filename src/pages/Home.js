@@ -9,6 +9,7 @@ import {
 
 } from "../components/Animations";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import Head from 'next/head'
 
 function Home() {
 
@@ -31,6 +32,20 @@ function Home() {
 
     return (
         <Fragment>
+            <Head>
+                <title>Home</title>
+                <meta name="description" content="HI, I'm <b>Zinhle</b>, I'm a creative, frontend developer, and I make clean, modern custom websites. My skills also include Motion graphics and animation." />
+                <meta name="robots" content="index,follow" />
+                <meta name="keywords" content="Web Developer, Design, Branding, Ux,UI,Coding, Landing Pages, Portfolio, Front-end " />
+                <meta name="author" content="Zinhle Buhlungu" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link
+                    rel="canonical"
+                    href="https://www.zinhle.dev"
+                    key="canonical"
+                />
+
+            </Head>
             <AnimatePresence>
                 <InView threshold={0.045}>
                     {({ ref, inView }) => (
