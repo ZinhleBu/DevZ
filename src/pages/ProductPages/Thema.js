@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 
 const Thema = () => {
-  const thema = "../images/thema-landing.jpg";
+  const thema = "../../thema-landing.webp";
 
   return (
 

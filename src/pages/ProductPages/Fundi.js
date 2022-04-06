@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 const Fundi = () => {
-  const fundi = "../../fundi-landing.png";
+  const fundi = "../../fundi-landing.webp";
 
   return (
     <>

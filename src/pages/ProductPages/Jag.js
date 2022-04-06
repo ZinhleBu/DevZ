@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Jag = () => {
 
-  const jag = "../../images/jag.jpg";
+  const jag = "../../images/jag.webp";
 
   return (
 

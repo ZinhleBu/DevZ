@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 
 const NoahCap = () => {
-  const noahCap = "../../noah-landing.jpg";
+  const noahCap = "../../../images/noah-landing.webp";
 
   return (
 

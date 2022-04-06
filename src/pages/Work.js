@@ -14,9 +14,9 @@ import {
 } from "../components/Animations";
 function Work() {
     
-    const art1 = "../../images/art.png";
-    const art2 = "../../images/art2.JPG";
-    const art3 = "../../images/art3.jpg";
+    const art1 = "../../images/art.webp";
+    const art2 = "../../images/art2.webp";
+    const art3 = "../../images/art3.webp";
 
     const genKey = () => {
         return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);

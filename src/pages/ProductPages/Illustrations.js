@@ -12,15 +12,16 @@ import { Link } from 'react-router-dom';
 
 const Illustrations = () => {
 
-  const art1 = "../../images/art.png";
-  const art2 = "../../images/art2.JPG";
-  const art3 = "../../images/art3.jpg";
-  const art4 = "../../images/gold.png";
-  const art5 = "../../images/easle.png";
-  const art6 = "../../images/kanye.png";
-  const art7 = "../../images/zol.png";
-  const art8 = "../../images/cole.png";
-  const art9 = "../../images/golden.png";
+  const art1 = "../../images/art.webp";
+  const art2 = "../../images/art2.webp";
+  const art3 = "../../images/art3.webp";
+  const art4 = "../../images/gold.webp";
+  const art5 = "../../images/easle.webp";
+  const art6 = "../../images/kanye.webp";
+  const art7 = "../../images/zol.webp";
+  const art8 = "../../images/cole.webp";
+  const art9 = "../../images/golden.webp";
+  const art10 = "../../images/zee.webp";
 
   return (
 
@@ -52,8 +53,14 @@ const Illustrations = () => {
       >Illustration</motion.h1>
       <div className="illustration">
         <div className="artSec">
+        <Parallax className="art-img" bgImage={art10} strength={100}>
+            <div className="art-inner" style={{ height: 400, width: 600, borderRadius: "18px" }}>
+              <div></div>
+            </div>
+          </Parallax>
+          <span style={{ width: "20px" }}></span>
           <Parallax className="art-img" bgImage={art3} strength={100}>
-            <div className="art-inner" style={{ height: 400, width: 300, borderRadius: "18px" }}>
+            <div className="art-inner" style={{ height: 400, width: 500, borderRadius: "18px" }}>
               <div></div>
             </div>
           </Parallax>

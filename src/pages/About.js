@@ -42,7 +42,7 @@ const tags = [
     },
 ];
 function About() {
-    const zee = "../zee.jpg";
+    const zee = "../zee.webp";
 
     return (
         <>

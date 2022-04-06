@@ -12,16 +12,16 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { Helmet } from 'react-helmet';
 function Home() {
 
-    const imageDemo = "../thema-landing.jpg";
-    const image2 = "../dark.jpg";
-    const image3 = "../jag.jpg";
+    const imageDemo = "../../thema-landing.webp";
+    const image2 = "../../images/dark.webp";
+    const image3 = "../../images/jag.webp";
     const arrow = "../icons/arrow-pointer.png";
     const edit = "../icons/edit.png";
     const program = "../icons/programming.png";
     const stat = "../icons/strategy1.png";
-    const art1 = "../../images/art.png";
-    const art2 = "../../images/art2.JPG";
-    const art3 = "../../images/art3.jpg";
+    const art1 = "../../images/art.webp";
+    const art2 = "../../images/art2.webp";
+    const art3 = "../../images/art3.webp";
 
 
     const genKey = () => {

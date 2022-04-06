@@ -13,18 +13,18 @@ import {
   staggerRevealClose
 } from "./Animations";
 
-import dallas from "../images/vati.png";
-import austin from "../images/jag.jpg";
-import newyork from "../images/cycles.png";
-import sanfrancisco from "../images/art.png";
-import beijing from "../images/can.png";
+import img1 from "../images/vati.webp";
+import img2 from "../images/jag.webp";
+import img3 from "../images/cycles.webp";
+import img4 from "../images/art.webp";
+import img5 from "../images/can.webp";
 
 const cities = [
-  { name: "Web Design", image: dallas },
-  { name: "UX/UI", image: austin },
-  { name: "Branding", image: newyork },
-  { name: "Illustrations", image: sanfrancisco },
-  { name: "Motion Graphics", image: beijing }
+  { name: "Web Design", image: img1 },
+  { name: "UX/UI", image: img2 },
+  { name: "Branding", image: img3 },
+  { name: "Illustrations", image: img4 },
+  { name: "Motion Graphics", image: img5 }
 ];
 
 const Hamburger = ({ state }) => {

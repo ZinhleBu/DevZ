@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 
 const Gryphon = () => {
-  const gryphon = "../../gryphon-landing.jpg";
+  const gryphon = "../../gryphon-landing.webp";
 
   return (
 
