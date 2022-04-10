@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 export const Footer = () => {
-    const footerLogo = "../logos/devz.png";
+    const footerLogo = "../../images/logo192.webp";
 
     return (
         <div>

@@ -40,43 +40,50 @@ function App() {
   return (
     <Fragment>
       <AnimatePresence exitBeforeEnter>
-      <React.Suspense fallback={<>...</>}>
-        <Router>
-          <motion.div
-            key={genKey()}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: .4 } }}
-            exit={{ opacity: 0, transition: { duration: .4 } }}
-            className="App">
-            <Header />
-            <div className="container">
-              <div className="wrapper">
-                <div className="home">
-                  <Switch>
-                    <ScrollToTop>
-                      <Route exact path="/" component={Home} />
-                      <Route exact path="/about" component={About} />
-                      <Route exact path="/work" component={Work} />
-                      <Route exact path="/contact-me" component={Contact} />
-                      <Route exact path="/illustrations" component={Illustrations} />
-                      <Route exact path="/jag" component={Jag} />
-                      <Route exact path="/thema" component={Thema} />
-                      <Route exact path="/fundi" component={Fundi} />
-                      <Route exact path="/gryphon" component={Gryphon} />
-                      <Route exact path="/imbeu" component={Imbeu} />
-                      <Route exact path="/noah" component={NoahCap} />
-                      <Route exact path="/vati" component={Vati} />
-                      <Route exact path="/iwesizwe" component={Iwesizwe} />
-                      <Route exact path="/hooks" component={Hooks} />
-                      <Route exact path="/videopage" component={VideoPage} />
-                    </ScrollToTop>
-                  </Switch>
+        <React.Suspense fallback={
+          <div className="loader-container " >
+            <div className="loader-loader-wrapper ">
+              <p>
+                ...
+              </p>
+            </div>
+          </div>}>
+          <Router>
+            <motion.div
+              key={genKey()}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { duration: .4 } }}
+              exit={{ opacity: 0, transition: { duration: .4 } }}
+              className="App">
+              <Header />
+              <div className="container">
+                <div className="wrapper">
+                  <div className="home">
+                    <Switch>
+                      <ScrollToTop>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/about" component={About} />
+                        <Route exact path="/work" component={Work} />
+                        <Route exact path="/contact-me" component={Contact} />
+                        <Route exact path="/illustrations" component={Illustrations} />
+                        <Route exact path="/jag" component={Jag} />
+                        <Route exact path="/thema" component={Thema} />
+                        <Route exact path="/fundi" component={Fundi} />
+                        <Route exact path="/gryphon" component={Gryphon} />
+                        <Route exact path="/imbeu" component={Imbeu} />
+                        <Route exact path="/noah" component={NoahCap} />
+                        <Route exact path="/vati" component={Vati} />
+                        <Route exact path="/iwesizwe" component={Iwesizwe} />
+                        <Route exact path="/hooks" component={Hooks} />
+                        <Route exact path="/videopage" component={VideoPage} />
+                      </ScrollToTop>
+                    </Switch>
+                  </div>
                 </div>
               </div>
-            </div>
-            <Footer />
-          </motion.div>
-        </Router>
+              <Footer />
+            </motion.div>
+          </Router>
         </React.Suspense>
 
       </AnimatePresence>

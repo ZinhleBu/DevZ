@@ -79,7 +79,13 @@ function Home() {
                                 <Link
                                     to='/work'
                                 >
-                                    <Parallax bgImage={imageDemo} strength={200}>
+                                    <Parallax 
+                                    bgImage={imageDemo} 
+                                    bgImageAlt={'thema-agency-mockup'}
+                                    strength={200}
+                                    blur={{ min: -15, max: 15 }}
+
+                                    >
                                         <div style={{ height: 500, width: 1600 }}>
                                             <div className="container-title"
                                                 style={{
