@@ -1,12 +1,10 @@
 import React, { Fragment } from "react";
 import "./App.scss";
 import { motion, AnimatePresence } from "framer-motion";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Footer } from "./components/Footer";
 import Header from "./components/Header";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-
-import { Footer } from "./components/Footer";
 // const Footer = React.lazy(() => import("./components/Footer"));
 
 // import Lottie from "lottie-react";
