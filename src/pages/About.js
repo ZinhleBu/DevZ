@@ -6,6 +6,11 @@ import { Helmet } from 'react-helmet';
 
 import Tag from '../components/Tag';
 
+const genKey = () => {
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+}
+console.log(genKey);
+
 const tags = [
     {
         name: 'UI DESIGN'
@@ -86,6 +91,8 @@ function About() {
             </div>
             <div className="banner">
                 <motion.h1
+                                                    key={genKey()}
+
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}

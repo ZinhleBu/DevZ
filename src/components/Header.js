@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { lazy, Suspense, useState, useEffect } from "react";
 import { withRouter, Link } from "react-router-dom";
-import Hamburger from "./Hamburger";
+// import Hamburger from "./Hamburger";
+
+const Hamburger = lazy(() => import('./Hamburger'));
+const renderLoader = () => <p>Loading</p>;
+
 const Header = ({ history }) => {
   // State of our Menu
   const [state, setState] = useState({
@@ -55,7 +59,7 @@ const Header = ({ history }) => {
         <div className="wrapper">
           <div className="inner-header">
             <div className="logo">
-              <Link to="/">DEVZ.</Link>
+              <Link to="/">ZINHLE.</Link>
             </div>
             <div className="menu">
               <button disabled={disabled} onClick={handleMenu}>
@@ -65,7 +69,9 @@ const Header = ({ history }) => {
           </div>
         </div>
       </div>
-      <Hamburger state={state} />
+      <Suspense fallback={renderLoader()}>
+        <Hamburger state={state} />
+      </Suspense>
     </header>
   );
 };

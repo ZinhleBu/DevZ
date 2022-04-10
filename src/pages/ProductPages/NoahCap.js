@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 
 const NoahCap = () => {
-  const noahCap = "../../../images/noah-landing.webp";
+  const noahCap = "../../../noah-landing.webp";
 
   return (
 
@@ -66,7 +66,7 @@ const NoahCap = () => {
             <p>- Theme Forest</p>
             <p>- Envato</p>
             <Link
-              to='/hooks'
+              to='/jag'
               style={{
                 color: "#000000",
                 textDecoration: "none",

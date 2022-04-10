@@ -9,8 +9,8 @@ import Work from "./pages/Work";
 import Contact from "./pages/Contact";
 
 import { Footer } from "./components/Footer";
-import Lottie from "lottie-react";
-import loadAnimation from "./utils/load.json";
+// import Lottie from "lottie-react";
+// import loadAnimation from "./utils/load.json";
 import Illustrations from "./pages/ProductPages/Illustrations";
 import Jag from "./pages/ProductPages/Jag";
 import Thema from "./pages/ProductPages/Thema";
@@ -41,7 +41,7 @@ function App() {
         animate={{ opacity: 1, transition: { duration: .4}}}
         exit={{ opacity: 0, transition: { duration: .4} }}
         className="App">
-          <motion.div
+          {/* <motion.div
             key={genKey()}
             initial={{ display: 1, zIndex: 20 }}
             animate={{ opacity: 0, zIndex: -1 }}
@@ -56,7 +56,7 @@ function App() {
                 autoplay={true}
                 className="lottie"
                 animationData={loadAnimation} />
-            </div>
+            </div> */}
           </motion.div>
           <Header />
           <div className="container">
@@ -85,7 +85,7 @@ function App() {
             </div>
           </div>
           <Footer />
-        </motion.div>
+        {/* </motion.div> */}
       </Router>
     </AnimatePresence>
     </Fragment>
