@@ -2,27 +2,33 @@ import React, { Fragment } from "react";
 import "./App.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "./components/Header";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Work from "./pages/Work";
-import Contact from "./pages/Contact";
+
 
 import { Footer } from "./components/Footer";
+// const Footer = React.lazy(() => import("./components/Footer"));
+
 // import Lottie from "lottie-react";
 // import loadAnimation from "./utils/load.json";
-import Illustrations from "./pages/ProductPages/Illustrations";
-import Jag from "./pages/ProductPages/Jag";
-import Thema from "./pages/ProductPages/Thema";
-import Fundi from "./pages/ProductPages/Fundi";
-import Gryphon from "./pages/ProductPages/Gryphon";
-import Imbeu from "./pages/ProductPages/Imbeu";
-import NoahCap from "./pages/ProductPages/NoahCap";
-import Vati from "./pages/ProductPages/Vati";
-import Iwesizwe from "./pages/ProductPages/Iwesizwe";
-import Hooks from "./pages/ProductPages/Hooks";
-import VideoPage from "./pages/ProductPages/VideoPage";
-import ScrollToTop from "./ScrollToTop";
+
+const About = React.lazy(() => import("./pages/About"));
+const Home = React.lazy(() => import("./pages/Home"));
+const Work = React.lazy(() => import("./pages/Work"));
+const Contact = React.lazy(() => import("./pages/Contact"));
+const Illustrations = React.lazy(() => import("./pages/ProductPages/Illustrations"));
+const Jag = React.lazy(() => import("./pages/ProductPages/Jag"));
+const Thema = React.lazy(() => import("./pages/ProductPages/Thema"));
+const Fundi = React.lazy(() => import("./pages/ProductPages/Fundi"));
+const Gryphon = React.lazy(() => import("./pages/ProductPages/Gryphon"));
+const Imbeu = React.lazy(() => import("./pages/ProductPages/Imbeu"));
+const NoahCap = React.lazy(() => import("./pages/ProductPages/NoahCap"));
+const Vati = React.lazy(() => import("./pages/ProductPages/Vati"));
+const Iwesizwe = React.lazy(() => import("./pages/ProductPages/Iwesizwe"));
+const Hooks = React.lazy(() => import("./pages/ProductPages/Hooks"));
+const VideoPage = React.lazy(() => import("./pages/ProductPages/VideoPage"));
+const ScrollToTop = React.lazy(() => import("./ScrollToTop"));
+
 
 function App() {
 
@@ -33,61 +39,47 @@ function App() {
 
   return (
     <Fragment>
-    <AnimatePresence exitBeforeEnter>
-      <Router>
-        <motion.div 
-        key={genKey()}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: .4}}}
-        exit={{ opacity: 0, transition: { duration: .4} }}
-        className="App">
-          {/* <motion.div
+      <AnimatePresence exitBeforeEnter>
+      <React.Suspense fallback={<>...</>}>
+        <Router>
+          <motion.div
             key={genKey()}
-            initial={{ display: 1, zIndex: 20 }}
-            animate={{ opacity: 0, zIndex: -1 }}
-            exit={{ opacity: 0 }}
-            transition={{ delay: 1.5, duration: .4 }}
-            className="loader-container">
-            <div className="loader-wrapper">
-              <Lottie
-                width={100}
-                height={100}
-                loop={true}
-                autoplay={true}
-                className="lottie"
-                animationData={loadAnimation} />
-            </div> */}
-          </motion.div>
-          <Header />
-          <div className="container">
-            <div className="wrapper">
-              <div className="home">
-                <Switch>
-                <ScrollToTop>
-                  <Route exact path="/" component={Home} />
-                  <Route exact path="/about" component={About} />
-                  <Route exact path="/work" component={Work} />
-                  <Route exact path="/contact-me" component={Contact} />
-                  <Route exact path="/illustrations" component={Illustrations} />
-                  <Route exact path="/jag" component={Jag} />
-                  <Route exact path="/thema" component={Thema} />
-                  <Route exact path="/fundi" component={Fundi} />
-                  <Route exact path="/gryphon" component={Gryphon} />
-                  <Route exact path="/imbeu" component={Imbeu} />
-                  <Route exact path="/noah" component={NoahCap} />
-                  <Route exact path="/vati" component={Vati} />
-                  <Route exact path="/iwesizwe" component={Iwesizwe} />
-                  <Route exact path="/hooks" component={Hooks} />
-                  <Route exact path="/videopage" component={VideoPage} />
-                  </ScrollToTop>
-                </Switch>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: .4 } }}
+            exit={{ opacity: 0, transition: { duration: .4 } }}
+            className="App">
+            <Header />
+            <div className="container">
+              <div className="wrapper">
+                <div className="home">
+                  <Switch>
+                    <ScrollToTop>
+                      <Route exact path="/" component={Home} />
+                      <Route exact path="/about" component={About} />
+                      <Route exact path="/work" component={Work} />
+                      <Route exact path="/contact-me" component={Contact} />
+                      <Route exact path="/illustrations" component={Illustrations} />
+                      <Route exact path="/jag" component={Jag} />
+                      <Route exact path="/thema" component={Thema} />
+                      <Route exact path="/fundi" component={Fundi} />
+                      <Route exact path="/gryphon" component={Gryphon} />
+                      <Route exact path="/imbeu" component={Imbeu} />
+                      <Route exact path="/noah" component={NoahCap} />
+                      <Route exact path="/vati" component={Vati} />
+                      <Route exact path="/iwesizwe" component={Iwesizwe} />
+                      <Route exact path="/hooks" component={Hooks} />
+                      <Route exact path="/videopage" component={VideoPage} />
+                    </ScrollToTop>
+                  </Switch>
+                </div>
               </div>
             </div>
-          </div>
-          <Footer />
-        {/* </motion.div> */}
-      </Router>
-    </AnimatePresence>
+            <Footer />
+          </motion.div>
+        </Router>
+        </React.Suspense>
+
+      </AnimatePresence>
     </Fragment>
   );
 }

@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { Parallax } from "react-parallax";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { Helmet } from 'react-helmet';
 
-import Tag from '../components/Tag';
+
+const Tag = lazy(() => import('../components/Tag'));
+const renderLoader = () => <p>Loading</p>;
 
 const genKey = () => {
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
@@ -54,16 +56,14 @@ function About() {
             <Helmet>
                 <title>About</title>
                 <meta name="description" content="Fueled by a passion for designing compelling products, I have a deep desire to excel and continuously improve in my work. " />
-                <meta name="robots" content="index,follow"/>
+                <meta name="robots" content="index,follow" />
                 <link
                     rel="canonical"
                     href="https://www.zinhle.dev/about"
                     key="canonical"
                 />
-           
             </Helmet>
             <div className="aboutHero">
-
                 <Parallax className="about-img" bgImage={zee} strength={200}>
                     <div className="img-inner" style={{ height: 500, width: 500, borderRadius: "18px" }}>
                         <div></div>
@@ -83,16 +83,18 @@ function About() {
                 </div>
                 <div className="tags">
                     {tags.map((tag) => (
-                        <div item="true" key={tag.id}>
-                            <Tag tag={tag} />
+
+                        <div item="true" key={tag.name}>
+                            <Suspense fallback={renderLoader()}>
+                                <Tag tag={tag} />
+                            </Suspense>
                         </div>
                     ))}
                 </div>
             </div>
             <div className="banner">
                 <motion.h1
-                                                    key={genKey()}
-
+                    key={genKey()}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
