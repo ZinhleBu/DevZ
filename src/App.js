@@ -3,7 +3,6 @@ import "./App.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Footer } from "./components/Footer";
-import Header from "./components/Header";
 
 // const Footer = React.lazy(() => import("./components/Footer"));
 
@@ -27,6 +26,7 @@ const Hooks = React.lazy(() => import("./pages/ProductPages/Hooks"));
 const VideoPage = React.lazy(() => import("./pages/ProductPages/VideoPage"));
 const ScrollToTop = React.lazy(() => import("./ScrollToTop"));
 
+const Header = React.lazy(() => import("./components/Header"));
 
 function App() {
 

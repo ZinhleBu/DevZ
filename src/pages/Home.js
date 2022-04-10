@@ -219,22 +219,22 @@ function Home() {
                             <div className="skillSec">
                                 <div className="skillWrapper">
                                     <div className="skillItem">
-                                        <img className="icon" src={arrow} alt="design-icon" width="30px" height="30px" />
+                                        <img className="icon" src={arrow} alt="design-icon" width="30px" height="30px" loading="lazy"/>
                                         <h3>Design</h3>
                                         <p>Designing layouts and user interfaces for web.</p>
                                     </div>
                                     <div className="skillItem">
-                                        <img className="icon" src={edit} alt="edit-icon" width="30px" height="30px" />
+                                        <img className="icon" src={edit} alt="edit-icon" width="30px" height="30px" loading="lazy"/>
                                         <h3>Video Editing</h3>
                                         <p>Motion graphics, Video intos, logo animations and many more.</p>
                                     </div>
                                     <div className="skillItem">
-                                        <img className="icon" src={program} alt="program-icon" width="30px" height="30px" />
+                                        <img className="icon" src={program} alt="program-icon" width="30px" height="30px" loading="lazy"/>
                                         <h3>Coding</h3>
                                         <p>Custom website layouts, functionality and analytics to suit your business needs.</p>
                                     </div>
                                     <div className="skillItem">
-                                        <img className="icon" src={stat} alt="stats-icon" width="30px" height="30px" />
+                                        <img className="icon" src={stat} alt="stats-icon" width="30px" height="30px" loading="lazy"/>
                                         <h3>Planning</h3>
                                         <p>Thorough planning of branding and marketing strategies.</p>
                                     </div>
